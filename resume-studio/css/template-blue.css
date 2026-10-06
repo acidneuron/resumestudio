@@ -1,0 +1,64 @@
+/* ============ Template: Blue CV (recreates the original blue design) ============ */
+.t-blue {
+  --t-blue: #3d85c6;
+  --t-blue-light: #d8e6f3;
+  --t-ink: #222;
+  font-family: "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
+  padding: 44px 46px;
+}
+.t-blue * { color: var(--t-ink); }
+
+.t-blue .rv-header { text-align: center; margin-bottom: 26px; }
+.t-blue .rv-name {
+  color: var(--t-blue); font-size: 30px; font-weight: 700; letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+.t-blue .rv-photo {
+  width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
+  display: block; margin: 0 auto 8px;
+}
+.t-blue .rv-title {
+  color: var(--t-blue); font-size: 19px; font-weight: 600; margin-bottom: 6px;
+}
+.t-blue .rv-contact { font-size: 11.5px; }
+.t-blue .rv-contact .sep { margin: 0 6px; color: #888; }
+.t-blue .rv-contact a { color: var(--t-blue); text-decoration: none; }
+
+.t-blue .rv-section { margin-top: 20px; }
+.t-blue .rv-section h3 {
+  color: var(--t-blue); font-size: 16px; font-weight: 700; letter-spacing: .8px;
+  border-bottom: 2px solid var(--t-blue); padding-bottom: 4px; margin-bottom: 12px;
+}
+.t-blue .rv-summary p { font-size: 12.5px; line-height: 1.55; }
+
+/* two-column timeline */
+.t-blue .rv-timeline { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; }
+.t-blue .rv-tl-item { display: contents; }
+.t-blue .rv-tl-when {
+  font-size: 10.5px; color: #555; padding-top: 1px;
+  padding-bottom: 14px;
+}
+.t-blue .rv-tl-what { border-left: 2px solid var(--t-blue-light); padding-left: 14px; padding-bottom: 14px; position: relative; }
+.t-blue .rv-tl-item:last-child .rv-tl-what,
+.t-blue .rv-tl-item:last-child .rv-tl-when { padding-bottom: 0; }
+.t-blue .rv-tl-what::before {
+  content: ""; position: absolute; left: -5px; top: 2px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--t-blue);
+}
+.t-blue .rv-role { font-size: 13px; font-weight: 700; }
+.t-blue .rv-org { font-size: 13px; font-style: italic; margin-bottom: 3px; }
+.t-blue .rv-details { font-size: 11px; line-height: 1.45; color: #333; white-space: pre-line; }
+
+/* skills: two columns of bars */
+.t-blue .rv-skills { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; }
+.t-blue .rv-skill { margin-bottom: 12px; }
+.t-blue .rv-skill-name { font-size: 12.5px; font-weight: 700; margin-bottom: 3px; }
+.t-blue .rv-skill-bar { display: flex; align-items: center; gap: 8px; }
+.t-blue .rv-skill-track {
+  flex: 1; height: 7px; border-radius: 4px; background: var(--t-blue-light); overflow: hidden;
+}
+.t-blue .rv-skill-fill {
+  height: 100%; background: var(--t-blue); border-radius: 4px;
+  transition: width .15s;
+}
+.t-blue .rv-skill-val { font-size: 10px; color: #555; width: 30px; }

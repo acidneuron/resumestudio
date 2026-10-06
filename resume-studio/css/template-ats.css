@@ -1,0 +1,35 @@
+/* ============ Template: Clean / ATS (recruiter-system friendly, monochrome) ============ */
+.t-ats {
+  --t-ink: #1a1a1a;
+  --t-muted: #555;
+  --t-rule: #999;
+  font-family: Georgia, "Times New Roman", serif;
+  padding: 52px 56px;
+}
+.t-ats * { color: var(--t-ink); }
+
+.t-ats .rv-header { text-align: center; margin-bottom: 22px; }
+.t-ats .rv-name { font-size: 26px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+.t-ats .rv-title { font-size: 14px; color: var(--t-muted); margin-bottom: 8px; font-style: italic; }
+.t-ats .rv-photo { width: 72px; height: 72px; border-radius: 4px; object-fit: cover; display: block; margin: 0 auto 8px; }
+.t-ats .rv-contact { font-size: 11.5px; color: var(--t-muted); }
+.t-ats .rv-contact .sep { margin: 0 5px; }
+.t-ats .rv-contact a { color: var(--t-muted); text-decoration: none; }
+
+.t-ats .rv-section { margin-top: 16px; }
+.t-ats .rv-section h3 {
+  font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+  border-bottom: 1px solid var(--t-rule); padding-bottom: 3px; margin-bottom: 10px;
+}
+.t-ats .rv-summary p { font-size: 12px; line-height: 1.5; }
+
+/* single-column entries: date inline with role */
+.t-ats .rv-entry { margin-bottom: 12px; page-break-inside: avoid; }
+.t-ats .rv-entry-head { display: flex; justify-content: space-between; align-items: baseline; }
+.t-ats .rv-role { font-size: 13px; font-weight: 700; }
+.t-ats .rv-tl-when { font-size: 11px; color: var(--t-muted); white-space: nowrap; margin-left: 10px; }
+.t-ats .rv-org { font-size: 12px; font-style: italic; color: var(--t-muted); }
+.t-ats .rv-details { font-size: 11.5px; line-height: 1.45; margin-top: 2px; white-space: pre-line; }
+
+/* skills: comma-separated line — the ATS-safe form */
+.t-ats .rv-skills-line { font-size: 12px; line-height: 1.6; }

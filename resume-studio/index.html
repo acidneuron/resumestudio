@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Studio</title>
+<link rel="stylesheet" href="fonts/source-sans-pro.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/template-blue.css">
+<link rel="stylesheet" href="css/template-ats.css">
+</head>
+<body>
+<header class="app-bar">
+  <div class="app-title">Resume <span>Studio</span></div>
+  <div class="app-controls">
+    <label class="ctrl">Template
+      <select id="templateSelect">
+        <option value="blue">Blue CV</option>
+        <option value="ats">Clean / ATS</option>
+      </select>
+    </label>
+    <button id="btnSaveJson" title="Download your data as JSON">Save JSON</button>
+    <button id="btnLoadJson" title="Load a previously saved JSON file">Load JSON</button>
+    <input type="file" id="jsonFile" accept=".json,application/json" hidden>
+    <button id="btnPrint" title="Print or save as PDF (A4)">Print / PDF</button>
+    <button id="btnWord" title="Download as editable .docx">Word .docx</button>
+    <button id="btnReset" class="danger" title="Start over from scratch">Reset</button>
+  </div>
+</header>
+
+<main class="app-main">
+  <section class="form-pane" id="formPane">
+    <div class="form-section">
+      <h2>Personal</h2>
+      <label class="f-row">Full name <input id="f-name" data-path="personal.name" placeholder="Your full name"></label>
+      <label class="f-row">Job title <input id="f-title" data-path="personal.title" placeholder="Your job title"></label>
+      <div class="f-row f-2col">
+        <input id="f-location" data-path="personal.location" placeholder="City, Country">
+        <input id="f-phone" data-path="personal.phone" placeholder="Phone number">
+      </div>
+      <div class="f-row f-2col">
+        <input id="f-email" data-path="personal.email" type="email" placeholder="you@example.com">
+        <input id="f-website" data-path="personal.website" placeholder="portfolio URL (optional)">
+      </div>
+      <div class="f-row photo-row">
+        <span class="photo-label">Photo</span>
+        <button id="btnPhoto" class="mini">Upload</button>
+        <button id="btnPhotoRemove" class="mini danger" hidden>Remove</button>
+        <input type="file" id="photoFile" accept="image/*" hidden>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Summary</h2>
+      <textarea id="f-summary" data-path="summary" rows="3" placeholder="Two or three sentences: what you do, your specialty, what makes you different."></textarea>
+    </div>
+
+    <div class="form-section">
+      <h2>Work Experience</h2>
+      <div id="workList"></div>
+      <button class="add-btn" data-add="work">+ Add experience</button>
+    </div>
+
+    <div class="form-section">
+      <h2>Education &amp; Training</h2>
+      <div id="eduList"></div>
+      <button class="add-btn" data-add="education">+ Add education</button>
+    </div>
+
+    <div class="form-section">
+      <h2>Skills</h2>
+      <div id="skillList"></div>
+      <button class="add-btn" data-add="skills">+ Add skill</button>
+    </div>
+
+    <footer class="app-footer">
+      <a href="https://buymeacoffee.com/acidneuron" target="_blank" rel="noopener">created by Acidneuron</a>
+      <span class="credit-sep">·</span>
+      <a href="https://buymeacoffee.com/acidneuron" target="_blank" rel="noopener">buy me a coffee if you find the app useful</a>
+    </footer>
+  </section>
+
+  <section class="preview-pane" id="previewPane">
+    <div class="page-scale" id="pageScale">
+      <div class="page t-blue" id="page"></div>
+    </div>
+  </section>
+</main>
+
+<script src="vendor/docx.umd.js" defer></script>
+<script src="js/app.js" defer></script>
+<script src="js/docx.js" defer></script>
+</body>
+</html>
